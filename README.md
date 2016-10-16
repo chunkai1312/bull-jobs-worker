@@ -5,6 +5,7 @@
 ## Features
 
 - Use [Bull Job Manager](https://github.com/OptimalBits/bull) for persistent job and message queue based on [Redis](http://redis.io)
+- Use [Toureiro](https://github.com/Epharmix/Toureiro) to provide web interface for administration of the queues
 - Use [winston](https://github.com/winstonjs/winston) for logging errors and events
 - Use [nodemon](https://github.com/remy/nodemon) for watching and restarting
 - Use [Mocha](https://github.com/mochajs/mocha) as test framework
@@ -13,16 +14,17 @@
 
 ```sh
 .
-├── jobs             # job queue and process implementations
 ├── config           # app configurations
 │   ├── env          # environment variable definitions
 │   ├── index.js     # configuration variable loader
 │   ├── local.js     # local variable definitions
 │   ├── logger.js    # winston logger transport settings
 │   └── mongoose.js  # mongoose connection handler
+├── jobs             # job queue and process implementations
 ├── logs             # logging files
 ├── test             # testing scripts
-├── worker.js        # entry
+|── server.js        # entry for running Toureiro
+├── worker.js        # entry for running workers
 └── package.json
 ```
 
@@ -58,6 +60,12 @@ $ npm start [worker1] [worker2] ...
 
 # run worker 'foo' and worker 'bar'
 $ npm start foo bar
+```
+
+Run Toureiro
+
+```sh
+$ npm run server
 ```
 
 ### Testing
