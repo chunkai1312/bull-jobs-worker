@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node worker.js",
+    "server": "node server.js",
     "dev": "nodemon worker.js",
     "test": "mocha",
-    "lint": "eslint worker.js config jobs test"
+    "lint": "eslint worker.js server.js jobs config test"
   },
   "author": "Chun-Kai Wang <chunkai1312@gmail.com>",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "bull": "^1.0.0",
     "lodash": "^4.13.1",
     "mongoose": "^4.5.3",
+    "toureiro": "^0.2.12",
     "winston": "^2.2.0",
     "winston-daily-rotate-file": "^1.1.5"
   },
