@@ -1,4 +1,4 @@
-'use stric'
+'use strict'
 
 const Queue = require('bull')
 const config = require('../config')
