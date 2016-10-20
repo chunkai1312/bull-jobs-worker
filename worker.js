@@ -13,6 +13,8 @@ process.argv.forEach((worker, index) => {
       logger.verbose(`The worker '${worker}' ready for job`)
     })
   } catch (err) {
-    logger.error(`Cannot find worker '${worker}'`)
+    (err.message === `Cannot find module './jobs/${worker}'`)
+      ? logger.verbose(`Cannot find worker '${worker}'`)
+      : logger.error(err)
   }
 })
