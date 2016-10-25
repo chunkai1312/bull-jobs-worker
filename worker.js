@@ -1,8 +1,8 @@
 'use strict'
 
 const path = require('path')
-const logger = require('./config/logger')
 const config = require('./config')
+const logger = require('./config/logger')
 const jobsPath = path.join(config.root, 'jobs')
 
 // require('./config/mongoose')()
