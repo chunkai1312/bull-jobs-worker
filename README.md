@@ -21,6 +21,7 @@
 │   ├── logger.js    # winston logger transport settings
 │   └── mongoose.js  # mongoose connection handler
 ├── jobs             # job queue and process implementations
+├── lib              # common libraries to be used across the app
 ├── logs             # logging files
 ├── test             # testing scripts
 |── server.js        # entry for running Toureiro
