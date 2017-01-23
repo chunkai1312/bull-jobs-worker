@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import fooQueue from '../jobs/foo'
+import fooQueue from '../src/jobs/foo'
 
 describe('foo worker:', () => {
   it('should complete job', (done) => {
