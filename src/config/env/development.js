@@ -1,6 +1,4 @@
-'use strict'
-
-module.exports = {
+export default {
   redis: {
     port: 6379,
     host: 'localhost'
