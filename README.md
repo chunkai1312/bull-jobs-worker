@@ -12,20 +12,19 @@
 
 ## Structure
 
-```sh
+```
 .
-├── config           # app configurations
-│   ├── env          # environment variable definitions
-│   ├── index.js     # configuration variable loader
-│   ├── local.js     # local variable definitions
-│   ├── logger.js    # winston logger transport settings
-│   └── mongoose.js  # mongoose connection handler
-├── jobs             # job queue and process implementations
-├── lib              # common libraries to be used across the app
-├── logs             # logging files
-├── test             # testing scripts
-|── server.js        # entry for running Toureiro
-├── worker.js        # entry for running workers
+├── src
+│   ├── config           # app configurations
+│   │   ├── env          # environment variable definitions
+│   │   ├── index.js     # configuration variables
+│   │   ├── logger.js    # winston logger transport settings
+│   │   └── mongoose.js  # mongoose connection handler
+│   └── jobs             # job queue and process implementations
+├── logs                 # logging files
+├── test                 # testing scripts
+|── server.js            # entry for running Toureiro
+├── worker.js            # entry for running workers
 └── package.json
 ```
 
