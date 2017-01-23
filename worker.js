@@ -1,11 +1,11 @@
 'use strict'
 
 const path = require('path')
-const config = require('./config')
-const logger = require('./config/logger')
+const env = process.env.NODE_ENV || 'development'
+const dir = (env === 'development') ? require('babel-register') && './src' : './dist'
+const config = require(`${dir}/config`)
+const logger = require(`${dir}/config/logger`)
 const jobsPath = path.join(config.root, 'jobs')
-
-// require('./config/mongoose')()
 
 process.argv.forEach((worker, index) => {
   if (index < 2) return
