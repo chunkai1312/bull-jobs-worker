@@ -1,8 +1,6 @@
-'use strict'
-
-const Queue = require('bull')
-const config = require('../config')
-const logger = require('../config/logger')
+import Queue from 'bull'
+import config from '../config'
+import logger from '../config/logger'
 const fooQueue = Queue('foo', config.redis.port, config.redis.host)
 
 fooQueue.process((job, done) => {
@@ -12,4 +10,4 @@ fooQueue.process((job, done) => {
   done()
 })
 
-module.exports = fooQueue
+export default fooQueue
