@@ -14,7 +14,7 @@ process.argv.forEach((worker, index) => {
   try {
     const queue = require(jobPath)
     queue.on('ready', function () {
-      logger.verbose(`The worker '${worker}' ready for job`)
+      logger.verbose(`Worker '${worker}' is ready for processing`)
     })
   } catch (err) {
     (err.message === `Cannot find module '${jobPath}'`)
