@@ -10,7 +10,7 @@
     "build": "babel src -d dist",
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-register",
     "coverage": "nyc report --reporter=text-summary",
-    "lint": "eslint worker.js server.js jobs config test"
+    "lint": "eslint src test"
   },
   "author": "Chun-Kai Wang <chunkai1312@gmail.com>",
   "license": "MIT",
