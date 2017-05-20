@@ -1,11 +1,11 @@
 import Queue from 'bull'
 import config from '../config'
-import logger from '../config/logger'
+
 const fooQueue = Queue('foo', config.redis.port, config.redis.host)
 
 fooQueue.process((job, done) => {
-  logger.verbose('data:', job.data)
-  logger.verbose('jobId:', job.jobId)
+  console.log('data:', job.data)
+  console.log('jobId:', job.jobId)
 
   done()
 })
