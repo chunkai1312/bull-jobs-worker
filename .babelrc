@@ -1,9 +1,11 @@
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": ["add-module-exports"],
-  "env": {
-    "test": {
-      "plugins": ["istanbul"]
-    }
-  }
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": true
+      }
+    }],
+    "stage-0"
+  ],
+  "plugins": ["add-module-exports"]
 }
