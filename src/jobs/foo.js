@@ -1,13 +1,19 @@
 import Queue from 'bull'
 import config from '../config'
 
-const fooQueue = Queue('foo', config.redis.port, config.redis.host)
+export const JOB_NAME = 'foo'
 
-fooQueue.process((job, done) => {
+const queue = Queue(JOB_NAME, config.redis.port, config.redis.host)
+
+queue.process((job, done) => {
   console.log('data:', job.data)
   console.log('jobId:', job.jobId)
 
   done()
 })
 
-export default fooQueue
+queue.on('ready', () => {
+  console.log(`The job "${JOB_NAME}" is ready for processing!`)
+})
+
+export default queue
