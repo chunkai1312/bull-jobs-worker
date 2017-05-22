@@ -1,6 +1,8 @@
-# worker-seed [![JavaScript Style Guide][standardjs-image]][standardjs-url]
+# bull-jobs-worker
 
-> A seed project for building job-queue worker based on Redis
+[![JavaScript Style Guide][standardjs-image]][standardjs-url]
+
+> A boilerpalte for building Bull job-queue worker based on Redis
 
 ## Features
 
