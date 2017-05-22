@@ -7,7 +7,7 @@
 ## Features
 
 - ES6/ES2015 support using [Babel](https://babeljs.io)
-- Use [Bull Job Manager](https://github.com/OptimalBits/bull) for persistent job and message queue based on [Redis](http://redis.io)
+- Use [Bull](https://github.com/OptimalBits/bull) job manager for persistent job and message queue based on [Redis](http://redis.io)
 - Use [Toureiro](https://github.com/Epharmix/Toureiro) to provide web interface for administration of the queues
 - Use [nodemon](https://github.com/remy/nodemon) for watching and restarting in development environment
 - Use [Jest](https://facebook.github.io/jest) as test framework
@@ -30,6 +30,10 @@
 ```
 
 ## Usage
+
+### Requirements
+
+[Bull](https://github.com/OptimalBits/bull) requires a Redis version greater than or equal to `2.8.11`.
 
 ### Setup
 
@@ -59,10 +63,10 @@ Run multiple jobs.
 $ npm start -- -- -j [JOB1,JOB2,...]
 ```
 
-Run Toureiro for monitoring jobs.
+Run [Toureiro](https://github.com/Epharmix/Toureiro) for monitoring jobs.
 
 ```
-$ npm start -- -- -u -p [prot]
+$ npm start -- -- -u -p [port]
 ```
 
 ### Testing
@@ -70,6 +74,11 @@ $ npm start -- -- -u -p [prot]
 ```
 $ npm test
 ```
+
+## References
+
+- [Bull](https://github.com/OptimalBits/bull)
+- [Toureiro](https://github.com/Epharmix/Toureiro)
 
 ## License
 
