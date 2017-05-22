@@ -4,7 +4,8 @@
   "description": "A seed project for building job-queue worker based on Redis",
   "main": "app.js",
   "scripts": {
-    "start": "node bin/worker.js",
+    "start": "npm run build && npm run prod",
+    "prod": "cross-env NODE_ENV=production node bin/worker.js",
     "dev": "nodemon bin/worker.js",
     "build": "babel src -d dist --copy-files",
     "test": "cross-env NODE_ENV=test jest",
@@ -39,5 +40,8 @@
     "jest": "^20.0.3",
     "nodemon": "^1.11.0",
     "rimraf": "^2.5.4"
+  },
+  "bin": {
+    "worker": "bin/worker.js"
   }
 }
