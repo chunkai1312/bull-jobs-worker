@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "npm run build && npm run prod",
-    "prod": "cross-env NODE_ENV=production node bin/worker.js",
+    "prod": "node bin/worker.js",
     "dev": "nodemon bin/worker.js",
     "build": "babel src -d dist --copy-files",
     "test": "cross-env NODE_ENV=test jest --forceExit",
