@@ -9,20 +9,20 @@
 - ES6/ES2015 support using [Babel](https://babeljs.io)
 - Use [Bull Job Manager](https://github.com/OptimalBits/bull) for persistent job and message queue based on [Redis](http://redis.io)
 - Use [Toureiro](https://github.com/Epharmix/Toureiro) to provide web interface for administration of the queues
-- Use [winston](https://github.com/winstonjs/winston) for logging errors and events
-- Use [nodemon](https://github.com/remy/nodemon) for watching and restarting
+- Use [nodemon](https://github.com/remy/nodemon) for watching and restarting in development environment
 - Use [Jest](https://facebook.github.io/jest) as test framework
 
 ## Structure
 
 ```
 .
+├── bin
+│   └── worker.js        # entry of worker
 ├── src
 │   ├── config           # app configurations
 │   │   ├── env          # environment variable definitions
 │   │   ├── config.js    # configuration variables
-│   │   ├── index.js     # entry of configuration
-│   │   └── logger.js    # winston logger transport settings
+│   │   └── index.js     # entry of configuration
 │   │── jobs             # job queue and process implementations
 │   └── app.js           # application entry
 ├── test                 # testing scripts
