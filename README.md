@@ -4,11 +4,12 @@
 
 ## Features
 
+- ES6/ES2015 support using [Babel](https://babeljs.io)
 - Use [Bull Job Manager](https://github.com/OptimalBits/bull) for persistent job and message queue based on [Redis](http://redis.io)
 - Use [Toureiro](https://github.com/Epharmix/Toureiro) to provide web interface for administration of the queues
 - Use [winston](https://github.com/winstonjs/winston) for logging errors and events
 - Use [nodemon](https://github.com/remy/nodemon) for watching and restarting
-- Use [Mocha](https://github.com/mochajs/mocha) as test framework
+- Use [Jest](https://facebook.github.io/jest) as test framework
 
 ## Structure
 
@@ -35,41 +36,37 @@
 $ npm install
 ```
 
-### Developing
+### Run for development
+
+Create a job file in folder `src/jobs`.
 
 ```sh
-$ npm run dev
+$ npm run dev -- -j [JOB_FILE_NAME]
 ```
 
-### Running
+### Run for production
 
-Run a worker
+Run a job.
 
-```sh
-$ npm start [worker]
-
-# run worker 'foo'
-$ npm start foo
+```
+$ npm start -- -- -j [JOB]
 ```
 
-Run multiple workers
+Run multiple jobs.
 
-```sh
-$ npm start [worker1] [worker2] ...
-
-# run worker 'foo' and worker 'bar'
-$ npm start foo bar
+```
+$ npm start -- -- -j [JOB1,JOB2,...]
 ```
 
-Run Toureiro
+Run Toureiro for monitoring jobs.
 
-```sh
-$ npm run server
+```
+$ npm start -- -- -u -p [prot]
 ```
 
 ### Testing
 
-```sh
+```
 $ npm test
 ```
 
