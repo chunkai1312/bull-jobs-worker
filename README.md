@@ -17,14 +17,13 @@
 ├── src
 │   ├── config           # app configurations
 │   │   ├── env          # environment variable definitions
-│   │   ├── index.js     # configuration variables
+│   │   ├── config.js    # configuration variables
+│   │   ├── index.js     # entry of configuration
 │   │   ├── logger.js    # winston logger transport settings
 │   │   └── mongoose.js  # mongoose connection handler
-│   └── jobs             # job queue and process implementations
-├── logs                 # logging files
+│   │── jobs             # job queue and process implementations
+│   └── app.js           # application entry
 ├── test                 # testing scripts
-|── server.js            # entry for running Toureiro
-├── worker.js            # entry for running workers
 └── package.json
 ```
 
