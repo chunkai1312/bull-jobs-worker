@@ -20,8 +20,7 @@
 │   │   ├── env          # environment variable definitions
 │   │   ├── config.js    # configuration variables
 │   │   ├── index.js     # entry of configuration
-│   │   ├── logger.js    # winston logger transport settings
-│   │   └── mongoose.js  # mongoose connection handler
+│   │   └── logger.js    # winston logger transport settings
 │   │── jobs             # job queue and process implementations
 │   └── app.js           # application entry
 ├── test                 # testing scripts
