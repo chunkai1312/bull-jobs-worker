@@ -1,7 +1,7 @@
 {
-  "name": "worker-seed",
+  "name": "bull-jobs-worker",
   "version": "1.0.0",
-  "description": "A seed project for building job-queue worker based on Redis",
+  "description": "A boilerpalte for building Bull job-queue worker based on Redis",
   "main": "app.js",
   "scripts": {
     "start": "npm run build && npm run prod",
