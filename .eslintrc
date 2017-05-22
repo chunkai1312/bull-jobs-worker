@@ -4,5 +4,9 @@
   "env": {
     "node": true,
     "jest": true
+  },
+  "globals": {
+    "jasmine": true
   }
+
 }
